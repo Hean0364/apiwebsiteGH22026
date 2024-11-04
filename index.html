@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Web API</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="codigo.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplo Web API</h1>
+        <p>Carnet: GH22026 | Nombre: Heber Antonio Guarita Hernandez | Grupo: 07</p>
+    </header>
+
+    <main>
+        <section class="intro">
+        
+            <button class="btn-obtener" onclick="obtenerProductos(); this.style.display='none';">Obtener Productos</button>
+        </section>
+
+        <section id="listado" class="listado" style="display:none;">
+            <form id="filtroprods">
+                <div class="filtros">
+                    <h2>Seleccione Categorías</h2>
+                    <label><input type="checkbox" id="c1" value="c1" checked> Electrónicos</label>
+                    <label><input type="checkbox" id="c2" value="c2" checked> Joyería</label>
+                    <label><input type="checkbox" id="c3" value="c3" checked> Ropa Caballero</label>
+                    <label><input type="checkbox" id="c4" value="c4" checked> Ropa Dama</label>
+                </div>
+                <ol class="instrucciones">
+                    <li>Haz clic en la imagen para ampliar.</li>
+                    <li>Haz clic en el precio para ordenar ascendente o descendentemente.</li>
+                </ol>
+                <table id="tabla">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Foto</th>
+                            <th id="price">Precio</th>
+                            <th>Título</th>
+                            <th>Descripción</th>
+                            <th>Categoría</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Heber Antonio Guarita Hernandez. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

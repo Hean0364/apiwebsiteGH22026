@@ -1,0 +1,170 @@
+
+
+/* Tipografía y variables de color */
+:root {
+    --color-primario: #4CAF50;
+    --color-secundario: #f4f4f4;
+    --color-texto: #333;
+    --color-fondo: #fff;
+    --color-hover: #45a049;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--color-primario);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+/* Botón */
+.btn-obtener {
+    background-color: var(--color-primario);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: center;
+}
+
+.btn-obtener:hover {
+    background-color: var(--color-hover);
+    
+}
+
+/* Sección principal */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Filtros y tabla */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filtros h2 {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+}
+
+.filtros label {
+    background-color: var(--color-fondo);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filtros label:hover {
+    background-color: var(--color-primario);
+    color: #fff;
+}
+
+.instrucciones {
+    margin-bottom: 20px;
+    list-style: decimal inside;
+    color: var(--color-texto);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-fondo);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--color-primario);
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+th#price::after {
+    content: ' ⇅';
+    font-size: 0.8rem;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--color-primario);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .filtros {
+        flex-direction: column;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Estilos para categorías */
+tr.c1 { background-color: #e3f2fd; }
+tr.c2 { background-color: #fce4ec; }
+tr.c3 { background-color: #e8f5e9; }
+tr.c4 { background-color: #fff3e0; }
