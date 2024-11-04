@@ -1,6 +1,4 @@
 
-
-/* Tipografía y variables de color */
 :root {
     --color-primario: #4CAF50;
     --color-secundario: #f4f4f4;
@@ -58,13 +56,12 @@ header p {
     
 }
 
-/* Sección principal */
 main {
     flex: 1;
     padding: 20px;
 }
 
-/* Filtros y tabla */
+
 .filtros {
     display: flex;
     flex-wrap: wrap;
@@ -138,7 +135,6 @@ img:hover {
     transform: scale(1.1);
 }
 
-/* Pie de página */
 footer {
     background-color: var(--color-primario);
     color: #fff;
@@ -147,7 +143,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsividad */
+
 @media (max-width: 768px) {
     .filtros {
         flex-direction: column;
